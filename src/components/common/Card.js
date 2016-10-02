@@ -11,6 +11,7 @@ const Card = (props) => {
 
 const styles = {
   containerStyle: {
+    alignSelf: 'stretch',
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',
