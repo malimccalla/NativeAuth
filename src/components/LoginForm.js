@@ -32,6 +32,16 @@ class LoginForm extends Component {
     );
   }
 
+  renderErrors() {
+    if (this.state.error) {
+      return (
+        <Text style={styles.errorTextStyle}>
+          {this.state.error}
+        </Text>
+      );
+    }
+  }
+
   render() {
     return (
       <Card>
@@ -54,9 +64,7 @@ class LoginForm extends Component {
           />
         </CardSection>
 
-        <Text style={styles.errorTextStyle}>
-          {this.state.error}
-        </Text>
+        {this.renderErrors()}
 
         <CardSection>
           {this.renderButton()}
